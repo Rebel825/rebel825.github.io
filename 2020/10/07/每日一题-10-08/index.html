@@ -438,10 +438,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">title: 每日一题-10.08</span><br><span class="line">date: 2018-10-08 11:00:00</span><br><span class="line">author: Rebel825</span><br><span class="line">top: true</span><br><span class="line">cover: true</span><br><span class="line">mathjax: false</span><br><span class="line">summary: 说点什么吧</span><br><span class="line">categories: LeetCode</span><br><span class="line">tags:</span><br><span class="line">  - Leetcode</span><br><span class="line">  - python</span><br><span class="line">  - C++</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-08-反转字符串"><a href="#10-08-反转字符串" class="headerlink" title="10.08 反转字符串"></a>10.08 反转字符串</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reverseString</span>(<span class="params">self, s</span>):</span></span><br><span class="line">    l, r = <span class="number">0</span>, len(s) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> l &lt; r:</span><br><span class="line">            s[l], s[r] = s[r], s[l]</span><br><span class="line">            l += <span class="number">1</span></span><br><span class="line">            r -= <span class="number">1</span></span><br><span class="line"><span class="comment"># 双指针遍历，互换位置</span></span><br></pre></td></tr></table></figure>
-
+                <pre><code>title: 每日一题-10.08
+date: 2018-10-08 11:00:00
+author: Rebel825
+top: true
+cover: true
+mathjax: false
+summary: 说点什么吧
+categories: LeetCode
+tags:
+  - Leetcode
+  - python
+  - C++</code></pre>
+<h3 id="10-08-反转字符串"><a href="#10-08-反转字符串" class="headerlink" title="10.08 反转字符串"></a>10.08 反转字符串</h3><pre><code class="python">def reverseString(self, s):
+    l, r = 0, len(s) - 1
+        while l &lt; r:
+            s[l], s[r] = s[r], s[l]
+            l += 1
+            r -= 1
+# 双指针遍历，互换位置</code></pre>
 
             </div>
             <hr/>
