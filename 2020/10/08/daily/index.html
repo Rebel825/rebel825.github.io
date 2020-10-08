@@ -458,7 +458,7 @@
                 <h3 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h3><p>主成分分析（Principal Components Analysis），是一种数据降维技术，用于数据预处理。</p>
 <p>通过线性变换，将数据映射到低维的子空间，操作过程中尽可能防止信息的丢失。</p>
 <p>顾名思义，找出数据中最具有代表性的成分，用数据的主要成分来代替原始数据。先对原始数据进行零均值化，并求其协方差矩阵，对协方差矩阵进行特征向量和特征值的求解；得到的特征向量构成降维后新的空间。其主要工作原理为：若对n维数据降至m维，先找出对于原始数据方差最大的方向，作为第一个主要特征；之后在各个正交方向上将数据进行离相关，也就是让其在不同的正交方向上没有相关性；再在这些正交的方向中找出与第一个主要特征方差最大的方向作为第二个主要特征。通过这种处理得到一组新的n维坐标，可以发现方差集中在前m个主要特征，这里只保留包含绝大部分方差的m个维度特征，实现对于数据的降维处理。</p>
-<h4 id="算法步骤："><a href="#算法步骤：" class="headerlink" title="算法步骤："></a>算法步骤：</h4><p><img src="daily/pca.png" alt="pca"></p>
+<h4 id="算法步骤："><a href="#算法步骤：" class="headerlink" title="算法步骤："></a>算法步骤：</h4><p><img src="pca.png" alt="pca"></p>
 <h4 id="sklearn-实现PCA"><a href="#sklearn-实现PCA" class="headerlink" title="sklearn 实现PCA"></a>sklearn 实现PCA</h4><blockquote>
 <p>sklearn.decomposition.PCA(n_components=None, copy=True, whiten=False)</p>
 <p>参数：</p>
