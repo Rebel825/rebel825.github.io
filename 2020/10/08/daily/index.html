@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Ice Blog">
+    <meta name="keywords" content="PCA, Ice Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Ice Blog</title>
+    <title>PCA | Ice Blog</title>
     <link rel="icon" type="image/png" href="/fac.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">PCA</h1>
                 </div>
             </div>
         </div>
@@ -408,12 +408,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/PCA/">
+                                <span class="chip bg-color">PCA</span>
+                            </a>
+                        
+                            <a href="/tags/sklearn/">
+                                <span class="chip bg-color">sklearn</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Machine-learning/" class="post-category">
+                                Machine learning
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -422,7 +439,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-07
+                    2020-10-08
                 </div>
                 
 
@@ -438,15 +455,39 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code>title: 每日一题
-date: 2020-10-08 09:25:00</code></pre>
-<h3 id="10-08-反转字符串"><a href="#10-08-反转字符串" class="headerlink" title="10.08 反转字符串"></a>10.08 反转字符串</h3><pre><code class="python">def reverseString(self, s):
-    l, r = 0, len(s) - 1
-        while l &lt; r:
-            s[l], s[r] = s[r], s[l]
-            l += 1
-            r -= 1
-# 双指针遍历，互换位置</code></pre>
+                <h3 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h3><p>主成分分析（Principal Components Analysis），是一种数据降维技术，用于数据预处理。</p>
+<p>通过线性变换，将数据映射到低维的子空间，操作过程中尽可能防止信息的丢失。</p>
+<p>顾名思义，找出数据中最具有代表性的成分，用数据的主要成分来代替原始数据。先对原始数据进行零均值化，并求其协方差矩阵，对协方差矩阵进行特征向量和特征值的求解；得到的特征向量构成降维后新的空间。其主要工作原理为：若对n维数据降至m维，先找出对于原始数据方差最大的方向，作为第一个主要特征；之后在各个正交方向上将数据进行离相关，也就是让其在不同的正交方向上没有相关性；再在这些正交的方向中找出与第一个主要特征方差最大的方向作为第二个主要特征。通过这种处理得到一组新的n维坐标，可以发现方差集中在前m个主要特征，这里只保留包含绝大部分方差的m个维度特征，实现对于数据的降维处理。</p>
+<h4 id="算法步骤："><a href="#算法步骤：" class="headerlink" title="算法步骤："></a>算法步骤：</h4><p><img src="file:///C:\Users\IceRebel\AppData\Local\Temp\ksohtml16300\wps1.png" alt="img"></p>
+<h4 id="sklearn-实现PCA"><a href="#sklearn-实现PCA" class="headerlink" title="sklearn 实现PCA"></a>sklearn 实现PCA</h4><blockquote>
+<p>sklearn.decomposition.PCA(n_components=None, copy=True, whiten=False)</p>
+<p>参数：</p>
+<p>n_components:</p>
+<blockquote>
+<p>这个参数可以帮我们指定希望PCA降维后的特征维度数目。最常用的做法是直接指定降维到的维度数目，此时n_components是一个大于等于1的整数。当然，我们也可以指定主成分的方差和所占的最小比例阈值，让PCA类自己去根据样本特征方差来决定降维到的维度数，此时n_components是一个（0，1]之间的数。当然，我们还可以将参数设置为”mle”, 此时PCA类会用MLE算法根据特征的方差分布情况自己去选择一定数量的主成分特征来降维。我们也可以用默认值，即不输入n_components，此时n_components=min(样本数，特征数)。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>copy:</p>
+<blockquote>
+<p>类型：bool，缺省时默认True；</p>
+<p>意义</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>whiten:</p>
+<blockquote>
+<p>判断是否进行白化。所谓白化，就是对降维后的数据的每个特征进行归一化，让方差都为1.对于PCA降维本身来说，一般不需要白化。如果你PCA降维后有后续的数据处理动作，可以考虑白化。默认值是False，即不进行白化。</p>
+</blockquote>
+</blockquote>
+<pre><code class="python">from sklearn.decomposition import PCA
+pca = PCA(n_components = 3)
+pca.fit(X)
+y = pca.transform(pcaMat)
+print pca.explained_variance_ratio_
+print pca.explained_variance_
+print pca.n_components_
+return y</code></pre>
 
             </div>
             <hr/>
@@ -472,7 +513,7 @@ date: 2020-10-08 09:25:00</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rebel825.github.io/2020/10/07/daily/">http://rebel825.github.io/2020/10/07/daily/</a>
+                    <a href="http://rebel825.github.io/2020/10/08/daily/">http://rebel825.github.io/2020/10/08/daily/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,7 +550,15 @@ date: 2020-10-08 09:25:00</code></pre>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/PCA/">
+                                    <span class="chip bg-color">PCA</span>
+                                </a>
+                            
+                                <a href="/tags/sklearn/">
+                                    <span class="chip bg-color">sklearn</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -549,17 +598,18 @@ date: 2020-10-08 09:25:00</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/08/test/">
+                <a href="/2020/10/08/daily/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="something">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="PCA">
                         
-                        <span class="card-title">something</span>
+                        <span class="card-title">PCA</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -569,9 +619,63 @@ date: 2020-10-08 09:25:00</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Machine-learning/" class="post-category">
+                                    Machine learning
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/PCA/">
+                        <span class="chip bg-color">PCA</span>
+                    </a>
+                    
+                    <a href="/tags/sklearn/">
+                        <span class="chip bg-color">sklearn</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/08/test/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="每日一题 10-08">
+                        
+                        <span class="card-title">每日一题 10-08</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -596,44 +700,6 @@ date: 2020-10-08 09:25:00</code></pre>
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/07/daily/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Rebel825
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>
