@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="每日一题-10-12, Ice Blog">
+    <meta name="keywords" content="每日一题 10-13, Ice Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>每日一题-10-12 | Ice Blog</title>
+    <title>每日一题 10-13 | Ice Blog</title>
     <link rel="icon" type="image/png" href="/fac.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">每日一题-10-12</h1>
+                    <h1 class="description center-align post-title">每日一题 10-13</h1>
                 </div>
             </div>
         </div>
@@ -439,7 +439,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-12
+                    2020-10-13
                 </div>
                 
 
@@ -455,20 +455,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code class="python">def getMinimumDifference(self, root: TreeNode) -&gt; int:
-    self.ans, self.res = float(&#39;-inf&#39;), float(&#39;inf&#39;)
+                <h3 id="翻转字符串"><a href="#翻转字符串" class="headerlink" title="翻转字符串"></a>翻转字符串</h3><pre><code class="python">def swagPairs(self, head):
+    newhead = ListNode(0)
+    newhead.next = head
+    cur = newhead
 
-    def dfs(root):
-        if not root:
-            return
-        dfs(root.left)
-        self.res = min(self.res, root.val - self.ans)
-        self.ans = root.val
-        dfs(root.right)
+    while cur.next and cur.next.next:
+        a, b = cur.next, cur.next.next
+        cur.next = b
+        a.next = b.next  # 这里是关键，先进行a.next的处理，在进行b.next
+        b.next = a       
+        cur = cur.next.next
 
-    dfs(root)
-    return self.res
-# 中序遍历，利用self.ans保存中间值以及二叉搜索树的特性。-主要考察二叉搜索树的特点-</code></pre>
+    return newhead.next
+
+# 需要进行实际的链表节点交换，保存中间节点，注意指针的使用</code></pre>
 
             </div>
             <hr/>
@@ -494,7 +495,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rebel825.github.io/2020/10/12/10-12/">http://rebel825.github.io/2020/10/12/10-12/</a>
+                    <a href="http://rebel825.github.io/2020/10/13/10-13/">http://rebel825.github.io/2020/10/13/10-13/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -579,9 +580,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/10/13/10-13/">
                     <div class="card-image">
@@ -599,9 +601,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -614,6 +616,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -636,24 +639,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/09/10-09/">
+                <a href="/2020/10/12/10-12/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="每日一题 10.09">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="每日一题-10-12">
                         
-                        <span class="card-title">每日一题 10.09</span>
+                        <span class="card-title">每日一题-10-12</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            每日一题-环形链表
+                            每日一题-二叉搜索树的最小绝对差
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
                             </span>
                         <span class="publish-author">
                             
