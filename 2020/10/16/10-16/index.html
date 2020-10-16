@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="每日一题 10-15, Ice Blog">
+    <meta name="keywords" content="每日一题 10-16, Ice Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>每日一题 10-15 | Ice Blog</title>
+    <title>每日一题 10-16 | Ice Blog</title>
     <link rel="icon" type="image/png" href="/fac.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">每日一题 10-15</h1>
+                    <h1 class="description center-align post-title">每日一题 10-16</h1>
                 </div>
             </div>
         </div>
@@ -439,7 +439,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-15
+                    2020-10-16
                 </div>
                 
 
@@ -455,19 +455,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="填充每个节点的下一个右侧节点指针"><a href="#填充每个节点的下一个右侧节点指针" class="headerlink" title="填充每个节点的下一个右侧节点指针"></a>填充每个节点的下一个右侧节点指针</h3><pre><code class="python">def connect(self, root: &#39;Node&#39;) -&gt; &#39;Node&#39;:
-    if not root or not root.left:
-        return root
+                <h3 id="有序数组的平方"><a href="#有序数组的平方" class="headerlink" title="有序数组的平方"></a>有序数组的平方</h3><pre><code class="python">def sortedSquares(self, A: List[int]) -&gt; List[int]:
+    res = []
+    i, j = 0, len(A) - 1
+    while i &lt;= j:
+        if abs(A[i]) &lt; abs(A[j]):
+            res.append(A[j] * A[j])
+            j -= 1
+        else:
+            res.append(A[i] * A[i])
+            i += 1
 
-    root.left.next = root.right
-    if root.next:
-        root.right.next = root.next.left # 对下一层的二叉树节点进行处理，思想很重要
+    return res[::-1]
 
-    self.connect(root.left)
-    self.connect(root.right)
-    return root
-
-# 注意递归终止的条件</code></pre>
+# 双指针，比较大小加入结果数组即可</code></pre>
 
             </div>
             <hr/>
@@ -493,7 +494,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rebel825.github.io/2020/10/15/10-15/">http://rebel825.github.io/2020/10/15/10-15/</a>
+                    <a href="http://rebel825.github.io/2020/10/16/10-16/">http://rebel825.github.io/2020/10/16/10-16/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -578,9 +579,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/10/16/10-16/">
                     <div class="card-image">
@@ -598,9 +600,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -613,6 +615,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -635,24 +638,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/14/10-14/">
+                <a href="/2020/10/15/10-15/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="每日一题 10-14">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="每日一题 10-15">
                         
-                        <span class="card-title">每日一题 10-14</span>
+                        <span class="card-title">每日一题 10-15</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            每日一题-查找常用字符
+                            每日一题-填充每个节点的下一个右侧节点指针
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-15
                             </span>
                         <span class="publish-author">
                             
