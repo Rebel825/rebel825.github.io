@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="每日一题 10-08, Ice Blog">
+    <meta name="keywords" content="每日一题 10-20, Ice Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>每日一题 10-08 | Ice Blog</title>
+    <title>每日一题 10-20 | Ice Blog</title>
     <link rel="icon" type="image/png" href="/fac.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">每日一题 10-08</h1>
+                    <h1 class="description center-align post-title">每日一题 10-20</h1>
                 </div>
             </div>
         </div>
@@ -455,13 +455,48 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="翻转字符串"><a href="#翻转字符串" class="headerlink" title="翻转字符串"></a>翻转字符串</h3><pre><code class="python">def reverseString(self, s: List[str]) -&gt; None:
-        l, r = 0, len(s) - 1
-        while l &lt; r:
-            s[l], s[r] = s[r], s[l]
-            l += 1
-            r -= 1
-# 双指针遍历，互换位置</code></pre>
+                <h3 id="重排链表"><a href="#重排链表" class="headerlink" title="重排链表"></a>重排链表</h3><pre><code class="python">def reorderList(self, head: ListNode) -&gt; None:
+    &quot;&quot;&quot;
+    Do not return anything, modify head in-place instead.
+    &quot;&quot;&quot;
+    def findMid(l1):
+        fast, slow = l1, l1
+        while fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next        
+        return slow
+
+    def reverse(l2):
+        newhead = None
+        while l2:
+            tmp = l2.next
+            l2.next = newhead
+            newhead = l2
+            l2 = tmp
+        return newhead
+
+    def merge(l1, l2):  # 注意这里的处理
+        while l1 and l2:
+            l1_tmp, l2_tmp = l1.next, l2.next  # 精髓
+
+            l1.next = l2
+            l1 = l1_tmp
+
+            l2.next = l1
+            l2 = l2_tmp
+        return l1
+
+    if not head:
+        return head
+
+    l1 = head
+    mid = findMid(l1)
+    l2 = mid.next
+    mid.next = None
+    l2 = reverse(l2)
+    merge(l1, l2)
+
+    # 综合考察，链表反转+快慢指针找中点+合并链表</code></pre>
 
             </div>
             <hr/>
@@ -487,7 +522,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rebel825.github.io/2020/10/08/10-08/">http://rebel825.github.io/2020/10/08/10-08/</a>
+                    <a href="http://rebel825.github.io/2020/10/08/10-20/">http://rebel825.github.io/2020/10/08/10-20/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,19 +611,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/10/08/daily/">
+                <a href="/2020/10/08/10-08/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="PCA">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="每日一题 10-08">
                         
-                        <span class="card-title">PCA</span>
+                        <span class="card-title">每日一题 10-08</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PCA小结
+                            每日一题-翻转字符串
                         
                     </div>
                     <div class="publish-info">
@@ -599,8 +634,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Machine-learning/" class="post-category">
-                                    Machine learning
+                            <a href="/categories/Leetcode/" class="post-category">
+                                    Leetcode
                                 </a>
                             
                             
@@ -610,12 +645,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/PCA/">
-                        <span class="chip bg-color">PCA</span>
+                    <a href="/tags/Leetcode/">
+                        <span class="chip bg-color">Leetcode</span>
                     </a>
                     
-                    <a href="/tags/sklearn/">
-                        <span class="chip bg-color">sklearn</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -626,7 +661,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="/2020/10/08/10-20/">
@@ -660,6 +695,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
