@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="每日一题 10-21, Ice Blog">
+    <meta name="keywords" content="搜索总结（DFS+BFS+回溯）, Ice Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>每日一题 10-21 | Ice Blog</title>
+    <title>搜索总结（DFS+BFS+回溯） | Ice Blog</title>
     <link rel="icon" type="image/png" href="/fac.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">每日一题 10-21</h1>
+                    <h1 class="description center-align post-title">搜索总结（DFS+BFS+回溯）</h1>
                 </div>
             </div>
         </div>
@@ -410,12 +410,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Leetcode/">
-                                <span class="chip bg-color">Leetcode</span>
-                            </a>
-                        
                             <a href="/tags/python/">
                                 <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/DFS/">
+                                <span class="chip bg-color">DFS</span>
+                            </a>
+                        
+                            <a href="/tags/BFS/">
+                                <span class="chip bg-color">BFS</span>
+                            </a>
+                        
+                            <a href="/tags/Backtracking/">
+                                <span class="chip bg-color">Backtracking</span>
                             </a>
                         
                     </div>
@@ -426,8 +434,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Leetcode/" class="post-category">
-                                Leetcode
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -455,23 +463,140 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="长按键入"><a href="#长按键入" class="headerlink" title="长按键入"></a>长按键入</h3><pre><code class="python">def isLongPressedName(self, name: str, typed: str) -&gt; bool:
-    i, j = 0, 0
-    while j &lt; len(typed):
-        if i &lt; len(name) and name[i] == typed[j]:
-            i += 1
-        else:
-            if j == 0:
-                return False
-            if typed[j] != typed[j - 1]:
-                return False
-        j += 1
+                <h3 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h3><p>深度优先搜索算法，是一种利用递归实现的搜索算法。<strong>常用于求解可达性问题</strong>。</p>
+<p>有两个问题需要考虑：</p>
+<ul>
+<li>栈：用栈来保存当前节点的信息，当遍历新节点返回时能够继续遍历当前节点，可以使用递归栈；</li>
+<li>标记：同BFS一样需要对已经遍历过的节点进行标记。</li>
+</ul>
+<h4 id="695-岛屿的最大面积"><a href="#695-岛屿的最大面积" class="headerlink" title="695 岛屿的最大面积"></a>695 岛屿的最大面积</h4><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/max-area-of-island/description/">LEETCODE</a> </p>
+<pre><code class="python">class Solution:
+    def findMaxArea(self, matrix: List[List[int]]) -&gt; int:
+        def dfs(matrix, i, j):
+            if not 0 &lt;= i &lt; len(matrix) or not 0 &lt;= j &lt; len(matrix[0]) or matrix[i][j] == 0:
+                return 0
+            matrix[i][j] = 0
+            res = 1
+            for x, y in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                res += dfs(matrix, i + x, j + y)
 
-    if i == len(name):
-        return True
-    return False
+            return res
 
-# 双指针去重，处理边界情况</code></pre>
+        if not matrix:
+            return 0
+        count = 0
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                count = max(count, dfs(matrix, i, j))
+
+        return count
+# 注意对已遍历节点的标记，以及dfs中返回值的设置</code></pre>
+<h4 id="200-岛屿数量"><a href="#200-岛屿数量" class="headerlink" title="200 岛屿数量"></a>200 岛屿数量</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/number-of-islands/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def numberOfIslands(self, grid: List[List[str]]) -&gt; int:
+        def infect(grid, i, j):
+            if not 0 &lt;= i &lt; len(grid) or not 0 &lt;= j &lt; len(grid[0]) or grid[i][j] == &#39;0&#39;:
+                return
+            grid[i][j] = &#39;0&#39;
+            for x, y in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                infect(grid, i + x, j + y)
+
+        if not grid:
+            return 0
+
+        count = 0
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == &#39;1&#39;:  # 遇到1，感染周围区域全为0
+                    infect(grid, i, j)
+                    count += 1
+
+        return count
+# 注意这种处理，DFS常用于处理可达性问题</code></pre>
+<h4 id="547-朋友圈"><a href="#547-朋友圈" class="headerlink" title="547 朋友圈"></a>547 朋友圈</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/friend-circles/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def friendsCircle(self, M: List[List[int]]) -&gt; int:
+        def dfs(grid, i, visit):
+            for j in range(len(grid)):
+                if grid[i][j] == 1 and visit[j] == 0:
+                    visit[j] = 1
+                    dfs(grid, j, visit)
+
+        visit = [0] * len(M)
+        count = 0
+        for i in range(len(M)):
+            if visit[i] == 0:
+                dfs(m, i, visit)
+                count += 1
+
+        return count
+# 用并查集更好一些，并查集之后会再总结</code></pre>
+<h4 id="130-填充封闭区域"><a href="#130-填充封闭区域" class="headerlink" title="130 填充封闭区域"></a>130 填充封闭区域</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/surrounded-regions/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def aroundArea(self, board: List[List[str]]) -&gt; None:
+        &quot;&quot;&quot;
+        Do not return anything, modify board in-place instead.
+        &quot;&quot;&quot;
+        def infect(board, i, j):
+            if not 0 &lt;= i &lt; len(board) or not 0 &lt;= j &lt; len(board[0]) or board[i][j] != &#39;O&#39;:
+                return
+            board[i][j] = &#39;T&#39;
+            for x, y in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                infect(board, i + x, j + y)
+
+        if not board:
+            return
+
+        for i in range(len(board)):
+            infect(board, i, 0)
+            infect(board, i, len(board[0]) - 1)
+
+        for j in range(len(board[0])):
+            infect(board, 0, j)
+            infect(board, len(board) - 1, j)
+
+        for i in range(len(board)):
+            for j in range(len(board[0])):
+                if board[i][j] == &#39;T&#39;:
+                    board[i][j] = &#39;O&#39;
+                elif board[i][j] == &#39;O&#39;:
+                    board[i][j] = &#39;X&#39;
+# 从4条边上做DFS，找到不能被填充的“O”区域；再做整体修改，&quot;T&quot;-&gt;&quot;O&quot;, &quot;O&quot;-&gt;&quot;X&quot;</code></pre>
+<h4 id="417-大西洋太平洋水流问题"><a href="#417-大西洋太平洋水流问题" class="headerlink" title="417 大西洋太平洋水流问题"></a>417 大西洋太平洋水流问题</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/pacific-atlantic-water-flow/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def flood(self, matrix: List[List[int]]) -&gt; List[List[int]]:
+        def dfs(matrix, i, j, visit):
+            if visit[i][j]:
+                return
+
+            visit[i][j] = True
+            for x, y in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nx, ny = i + x, j + y
+                if 0 &lt;= nx &lt; len(matrix) and 0 &lt;= ny &lt; len(matrix[0]) and matrix[i][j] &lt;= matrix[nx][ny]:
+                    dfs(matrix, nx, ny, visit)
+
+        if not matrix:
+            return []
+
+        m, n = len(matrix), len(matrix[0])
+        dvisit, tvisit = [[False] * n for _ in range(m)], [[False] * n for _ in range(m)]
+
+        for i in range(m):
+            dfs(matrix, i, 0, tvisit)
+            dfs(matrix, i, n - 1, dvisit)
+
+        for j in range(n):
+            dfs(matrix, 0, j, tvisit)
+            dfs(matrix, m - 1, j, dvisit)
+
+        res = []
+        for i in range(m):
+            for j in range(n):
+                if tvisit[i][j] and dvisit[i][j]:
+                    res.append([i, j])
+
+        return res
+# 类似上一题，从四个边界出发，定义两个可到达位置的数组，若都可达，则添加进结果集</code></pre>
 
             </div>
             <hr/>
@@ -497,7 +622,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rebel825.github.io/2020/10/21/10-21/">http://rebel825.github.io/2020/10/21/10-21/</a>
+                    <a href="http://rebel825.github.io/2020/10/21/%E6%90%9C%E7%B4%A2/">http://rebel825.github.io/2020/10/21/%E6%90%9C%E7%B4%A2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,12 +660,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Leetcode/">
-                                    <span class="chip bg-color">Leetcode</span>
-                                </a>
-                            
                                 <a href="/tags/python/">
                                     <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/DFS/">
+                                    <span class="chip bg-color">DFS</span>
+                                </a>
+                            
+                                <a href="/tags/BFS/">
+                                    <span class="chip bg-color">BFS</span>
+                                </a>
+                            
+                                <a href="/tags/Backtracking/">
+                                    <span class="chip bg-color">Backtracking</span>
                                 </a>
                             
                         </div>
@@ -582,9 +715,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/10/21/%E6%90%9C%E7%B4%A2/">
                     <div class="card-image">
@@ -602,9 +736,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -617,6 +751,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -647,24 +782,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/20/10-20/">
+                <a href="/2020/10/21/10-21/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="每日一题 10-20">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="每日一题 10-21">
                         
-                        <span class="card-title">每日一题 10-20</span>
+                        <span class="card-title">每日一题 10-21</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            每日一题-重排链表
+                            每日一题-长按键入
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
                             </span>
                         <span class="publish-author">
                             
