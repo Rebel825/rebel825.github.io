@@ -746,12 +746,143 @@
                 self.res.append(&#39;.&#39;join(tmp))
                 return
 
-            for i in range(min(3, len(s))):
-                x, y = s[:i + 1], s[i + 1:]
-                if x and 0 &lt;= int(x) &lt; 256 and str(int(x)) == x:
-                    bt(y, tmp + [x])
+            if len(tmp) &lt; 4:  # 剪枝，提升时间复杂度，要注意
+                for i in range(min(3, len(s))):
+                    x, y = s[:i + 1], s[i + 1:]
+                    if x and 0 &lt;= int(x) &lt; 256 and str(int(x)) == x:
+                        bt(y, tmp + [x])
 
         bt(s, [])
+        return self.res
+
+    # 所谓回溯，就是在可供选择的列表中进行选择，当满足条件时将tmp加入结果集，继续求解，直到得到所有解集。</code></pre>
+<h4 id="79-单词搜索"><a href="#79-单词搜索" class="headerlink" title="79 单词搜索"></a>79 单词搜索</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/word-search/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def findWord(self, board: List[List[str]], word: str) -&gt; bool:
+        def bt(board, i, j, ind):
+            if not 0 &lt;= i &lt; len(board) or not 0 &lt;= j &lt; len(board[0]) or board[i][j] != word[ind]:
+                return False
+            if ind == len(word) - 1:
+                return True
+
+            tmp = board[i][j]
+            board[i][j] = &#39;*&#39;
+            res = bt(board, i + 1, j, ind + 1) or bt(board, i - 1, j, ind + 1)\
+            or bt(board, i, j + 1, ind + 1) or bt(board, i, j - 1, ind + 1)
+            board[i][j] = tmp
+
+            return res
+
+        for i in range(len(board)):
+            for j in range(len(borad[0])):
+                if bt(borad, i, j, 0):
+                    return True
+
+        return False
+# 任意一个方向可以走下去就行，注意对经过路径的标记以及恢复</code></pre>
+<h4 id="257二叉树的所有路径"><a href="#257二叉树的所有路径" class="headerlink" title="257二叉树的所有路径"></a>257二叉树的所有路径</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-tree-paths/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def findAllPath(self, root: TreeNode) -&gt; List[str]:
+        if not root:
+            return []
+
+        self.res = []
+        def bt(root, tmp):
+            if root and not root.left and not root.right:
+                tmp += root.val
+                self.res.append(tmp)
+                return
+
+            if root.left:
+                bt(root.left, tmp + str(root.val) + &#39;-&gt;&#39;)
+            if root.right:
+                bt(root.right, tmp + str(root.val) + &#39;-&gt;&#39;)
+
+        bt(root, &#39;&#39;)
+        return self.res        </code></pre>
+<h4 id="46-全排列"><a href="#46-全排列" class="headerlink" title="46 全排列"></a>46 全排列</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/permutations/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def permute(self, nums: List[int]) -&gt; List[List[int]]:
+        if not nums:
+            return []
+
+        self.visit = [False] * len(nums)
+        self.res = []
+        def bt(nums, i, tmp):
+            if i == len(nums):
+                self.res.append(tmp)
+                return
+
+            for j in range(len(nums)):
+                if self.visit[j]:
+                    continue
+                self.visit[j] = True  
+                bt(nums, i + 1, tmp + [nums[j]])
+                self.visit[j] = False
+
+        bt(nums, 0, [])
+        return self.res
+# 注意标记和恢复</code></pre>
+<h4 id="47-全排列Ⅱ"><a href="#47-全排列Ⅱ" class="headerlink" title="47 全排列Ⅱ"></a>47 全排列Ⅱ</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/permutations-ii/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def permutetwo(self, nums: List[]) -&gt; List[]:
+        if not nums:
+            return []
+        self.res = []
+        self.visit = [False] * len(nums)
+
+        def bt(nums, i, tmp):
+            if i == len(nums):
+                self.res.append(tmp)
+                return
+
+            ans = []
+            for j in range(len(nums)):
+                if self.visit[j] or nums[j] in ans:
+                    continue
+                self.visit[j] = True
+                ans.append(nums[j])
+                bt(nums, i + 1, tmp + [nums[j]])
+                self.visit[j] = False
+
+        bt(nums, 0, [])
+        return self.res</code></pre>
+<h4 id="77-组合"><a href="#77-组合" class="headerlink" title="77 组合"></a>77 组合</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/combinations/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def combination(self, n: int, k: int) -&gt; List[List[int]]:
+        if k == 0:
+            return []
+
+        self.res = []
+
+        def bt(n, k, i, tmp):
+            if len(tmp) == k:
+                self.res.append(tmp)
+                return
+
+            for j in range(i + 1, n + 1):             
+                bt(n, k, j, tmp + [j])
+
+        bt(n, k, 0, [])
+        return self.res</code></pre>
+<h4 id="39-组合总和"><a href="#39-组合总和" class="headerlink" title="39 组合总和"></a>39 组合总和</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/combination-sum/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def combineSum(self, candidates: List[int], target: int) -&gt; List[List[int]]:
+        if not candidates:
+            return []
+
+        self.res = []
+        def bt(candidates, target, i, tmp, ans):
+            if ans == target:
+                self.res.append(tmp)
+                return
+            if ans &gt; target: # 注意剪枝，不然容易超出内存限制
+                return
+
+            for j in range(i, len(candidates)):
+                bt(candidates, target, j, tmp + [candidates[j]], ans + candidates[j])
+
+        bt(candidates, target, 0, [], 0)
         return self.res</code></pre>
 
             </div>
