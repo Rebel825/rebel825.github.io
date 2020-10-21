@@ -469,7 +469,7 @@
 <li>栈：用栈来保存当前节点的信息，当遍历新节点返回时能够继续遍历当前节点，可以使用递归栈；</li>
 <li>标记：同BFS一样需要对已经遍历过的节点进行标记。</li>
 </ul>
-<h4 id="695-岛屿的最大面积"><a href="#695-岛屿的最大面积" class="headerlink" title="695 岛屿的最大面积"></a>695 岛屿的最大面积</h4><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/max-area-of-island/description/">LEETCODE</a> </p>
+<h4 id="695-岛屿的最大面积"><a href="#695-岛屿的最大面积" class="headerlink" title="695 岛屿的最大面积"></a>695 岛屿的最大面积</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/max-area-of-island/description/">LEETCODE</a> </p>
 <pre><code class="python">class Solution:
     def findMaxArea(self, matrix: List[List[int]]) -&gt; int:
         def dfs(matrix, i, j):
@@ -597,6 +597,98 @@
 
         return res
 # 类似上一题，从四个边界出发，定义两个可到达位置的数组，若都可达，则添加进结果集</code></pre>
+<h3 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h3><h4 id="1091-二进制矩阵中的最短路径"><a href="#1091-二进制矩阵中的最短路径" class="headerlink" title="1091 二进制矩阵中的最短路径"></a>1091 二进制矩阵中的最短路径</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shortest-path-in-binary-matrix/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def shortestPath(self, grid: List[List[int]]) -&gt; int:
+        if not grid:
+            return -1
+
+        q = collections.deque()
+        q.append((0, 0))
+        count = 0
+        direction = ((1, 0), (0, 1), (1, 1), (1, -1), (-1, 0), (0, -1), (-1, -1), (-1, 1))
+
+        while q:
+            count += 1
+            for _ in range(len(q)):
+                i, j = q.popleft()
+                if grid[i][j] == 1:
+                    continue
+                if i == len(grid) - 1 and j == len(grid[0]) - 1:
+                    return count
+                grid[i][j] = 1
+                for x, y in direction:
+                    nx, ny = i + x, j + y
+                    if 0 &lt;= nx &lt; len(grid) and 0 &lt;= ny &lt; len(grid[0]):
+                        q.append((nx, ny))
+
+        return -1
+# 注意方向的选择，以及遍历过路径如何进行保存（新建一个set或者在原矩阵进行修改）</code></pre>
+<h4 id="279-完全平方数"><a href="#279-完全平方数" class="headerlink" title="279 完全平方数"></a>279 完全平方数</h4><pre><code class="python">class Solution:
+    def SquareNumber(self, n: int) -&gt; int:
+        def create(n):
+            res = []
+            i = 1
+            while (i ** 2) &lt;= n:
+                res.append(i ** 2)
+                i += 1
+            return res
+
+        s = create(n)
+        q = collections.deque()
+        q.append(n)
+        visit = set()
+        visit.add(n)
+        count = 0
+
+        while q:
+            count += 1
+            for _ in range(len(q)):
+                x = q.popleft()
+                for i in s:
+                    tmp = x - i
+                    if tmp == 0:
+                        return count
+                    if tmp &lt; 0:
+                        break
+                    if tmp in visit:
+                        continue
+                    visit.add(tmp)
+                    q.append(tmp)
+
+        return count
+# 还是注意已经遍历过节点的状态保存（新建集合或者数组索引都可以）</code></pre>
+<h4 id="127-单词接龙"><a href="#127-单词接龙" class="headerlink" title="127 单词接龙"></a>127 单词接龙</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/word-ladder/description/">LEETCODE</a></p>
+<pre><code class="python">class Solution:
+    def wordsD(self, beginword: str, endword: str, wordlist: List[str]) -&gt; int:
+        ans = collections.defaultdict(list)
+
+        for word in wordlist:
+            for i in range(len(word)):
+                tmp = ans[:i] + &#39;*&#39; + ans[i + 1:]
+                ans[tmp].append(word)
+
+        q = collections.deque()
+        q.append(beginword)
+        visit = set()
+        visit.add(beginword)
+        count = 0
+
+        while q:
+            count += 1
+            for _ in range(len(q)):
+                node = q.popleft()
+                for i in range(len(node)):
+                    tmp = node[:i] + &#39;*&#39; + node[i + 1:]
+                    for x in ans[tmp]:
+                        if x == endword:
+                            return count + 1 # 返回值为序列长度，需要+1
+                        if x not in visit:
+                            visit.add(x)
+                            q.append(x)
+
+        return 0
+# 注意返回值是序列的长度</code></pre>
 
             </div>
             <hr/>
