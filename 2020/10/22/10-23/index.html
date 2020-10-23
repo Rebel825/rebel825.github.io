@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="每日一题 10-22, Ice Blog">
+    <meta name="keywords" content="每日一题 10-23, Ice Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>每日一题 10-22 | Ice Blog</title>
+    <title>每日一题 10-23 | Ice Blog</title>
     <link rel="icon" type="image/png" href="/fac.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">每日一题 10-22</h1>
+                    <h1 class="description center-align post-title">每日一题 10-23</h1>
                 </div>
             </div>
         </div>
@@ -455,22 +455,29 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="划分字母区间"><a href="#划分字母区间" class="headerlink" title="划分字母区间"></a>划分字母区间</h3><pre><code class="python">def partitionLabels(self, S: str) -&gt; List[int]:
-    res = []
-    start, end = 0, 0
-    hash_map = &#123;&#125;
-    for i in range(len(S)):
-        hash_map[S[i]] = i
+                <h3 id="划分字母区间"><a href="#划分字母区间" class="headerlink" title="划分字母区间"></a>划分字母区间</h3><pre><code class="python">def isPalindrome(self, head: ListNode) -&gt; bool:
+    l1, l2 = head, head
+    new_head = None
 
-    for i in range(len(S)):
-        end = max(end, hash_map[S[i]])
-        if i == end:
-            res.append(end - start + 1)
-            start = i + 1
+    while l2 and l2.next:
+        l1 = l1.next
+        l2 = l2.next.next
 
-    return res
+    while l1:
+        tmp = l1.next
+        l1.next = new_head
+        new_head = l1
+        l1 = tmp
 
-#找到每一个字母出现的最后的位置，更新end的位置，当索引==end时，添加结果，同时更新start。</code></pre>
+    while head and new_head:
+        if head.val != new_head.val:
+            return False
+        head = head.next
+        new_head = new_head.next
+
+    return True
+
+# 1：找到中间链表节点；2：将后半部分进行反转；3：进行比较。</code></pre>
 
             </div>
             <hr/>
@@ -496,7 +503,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rebel825.github.io/2020/10/22/10-22/">http://rebel825.github.io/2020/10/22/10-22/</a>
+                    <a href="http://rebel825.github.io/2020/10/22/10-23/">http://rebel825.github.io/2020/10/22/10-23/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -585,25 +592,74 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/10/22/10-23/">
+                <a href="/2020/10/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="每日一题 10-23">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="动态规划">
                         
-                        <span class="card-title">每日一题 10-23</span>
+                        <span class="card-title">动态规划</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            每日一题-回文链表
+                            动态规划小结
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="far fa-clock fa-fw icon-date"></i>2020-10-22
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Rebel825
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/Dynamic-Programming/">
+                        <span class="chip bg-color">Dynamic Programming</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/22/10-22/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="每日一题 10-22">
+                        
+                        <span class="card-title">每日一题 10-22</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            每日一题-划分字母区间
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -625,67 +681,6 @@
                     
                     <a href="/tags/python/">
                         <span class="chip bg-color">python</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/21/%E6%90%9C%E7%B4%A2/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="搜索总结（DFS+BFS+回溯）">
-                        
-                        <span class="card-title">搜索总结（DFS+BFS+回溯）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            DFS+BFS+回溯
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/DFS/">
-                        <span class="chip bg-color">DFS</span>
-                    </a>
-                    
-                    <a href="/tags/BFS/">
-                        <span class="chip bg-color">BFS</span>
-                    </a>
-                    
-                    <a href="/tags/Backtracking/">
-                        <span class="chip bg-color">Backtracking</span>
                     </a>
                     
                 </div>
