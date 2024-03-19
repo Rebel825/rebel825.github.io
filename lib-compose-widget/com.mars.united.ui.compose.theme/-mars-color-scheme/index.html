@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MarsColorScheme</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>lib-compose-widget</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="lib-compose-widget::com.mars.united.ui.compose.theme/MarsColorScheme///PointingToDeclaration//-1785960807">
+  <div class="breadcrumbs"><a href="../../../index.html">lib-compose-widget</a><span class="delimiter">/</span><a href="../index.html">com.mars.united.ui.compose.theme</a><span class="delimiter">/</span><span class="current">MarsColorScheme</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Mars</span><wbr></wbr><span>Color</span><wbr></wbr><span><span>Scheme</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Immutable.html"><span class="token annotation builtin">Immutable</span></a></div></div><span class="token keyword">class </span><a href="index.html">MarsColorScheme</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>isDark<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc3<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc4<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc5<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc6<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc7<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc8<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc9<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc10<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc11<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc12<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc13<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc14<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc15<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc16<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc17<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc18<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc19<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc20<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc21<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc22<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc23<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc24<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc25<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc26<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc27<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc28<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc29<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc30<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc31<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc32<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc33<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc34<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc35<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc36<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc37<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc38<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc39<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc40<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc41<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc42<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc43<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc44<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc45<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc46<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc47<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc48<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc49<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc50<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc51<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc52<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc53<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc54<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc55<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc56<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc57<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc58<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc62<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc63<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc64<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc65<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc66<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc67<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc68<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc69<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc70<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc71<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gc72<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">Compose 配色方案 数据类</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="889097534%2FConstructors%2F-1785960807" anchor-label="MarsColorScheme" id="889097534%2FConstructors%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-mars-color-scheme.html"><span>Mars</span><wbr></wbr><span>Color</span><wbr></wbr><span><span>Scheme</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="889097534%2FConstructors%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-mars-color-scheme.html"><span class="token function">MarsColorScheme</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isDark<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">gc1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc3<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc4<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc5<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc6<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc7<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc8<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc9<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc10<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc11<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc12<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc13<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc14<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc15<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc16<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc17<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc18<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc19<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc20<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc21<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc22<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc23<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc24<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc25<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc26<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc27<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc28<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc29<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc30<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc31<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc32<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc33<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc34<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc35<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc36<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc37<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc38<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc39<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc40<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc41<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc42<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc43<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc44<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc45<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc46<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc47<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc48<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc49<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc50<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc51<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc52<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc53<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc54<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc55<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc56<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc57<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc58<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc62<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc63<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc64<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc65<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc66<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc67<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc68<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc69<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc70<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc71<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token punctuation">, </span></span><span class="parameter ">gc72<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-1444926943%2FProperties%2F-1785960807" anchor-label="gc1" id="-1444926943%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc1.html"><span><span>gc1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1444926943%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1444926943%2FProperties%2F-1785960807" anchor-label="gc1" id="-1444926943%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc1.html">gc1</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1939832745%2FProperties%2F-1785960807" anchor-label="gc10" id="1939832745%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc10.html"><span><span>gc10</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1939832745%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1939832745%2FProperties%2F-1785960807" anchor-label="gc10" id="1939832745%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc10.html">gc10</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1970852552%2FProperties%2F-1785960807" anchor-label="gc11" id="1970852552%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc11.html"><span><span>gc11</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1970852552%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1970852552%2FProperties%2F-1785960807" anchor-label="gc11" id="1970852552%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc11.html">gc11</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2001872359%2FProperties%2F-1785960807" anchor-label="gc12" id="2001872359%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc12.html"><span><span>gc12</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2001872359%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="2001872359%2FProperties%2F-1785960807" anchor-label="gc12" id="2001872359%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc12.html">gc12</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2032892166%2FProperties%2F-1785960807" anchor-label="gc13" id="2032892166%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc13.html"><span><span>gc13</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2032892166%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="2032892166%2FProperties%2F-1785960807" anchor-label="gc13" id="2032892166%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc13.html">gc13</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2063911973%2FProperties%2F-1785960807" anchor-label="gc14" id="2063911973%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc14.html"><span><span>gc14</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2063911973%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="2063911973%2FProperties%2F-1785960807" anchor-label="gc14" id="2063911973%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc14.html">gc14</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2094931780%2FProperties%2F-1785960807" anchor-label="gc15" id="2094931780%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc15.html"><span><span>gc15</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2094931780%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="2094931780%2FProperties%2F-1785960807" anchor-label="gc15" id="2094931780%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc15.html">gc15</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2125951587%2FProperties%2F-1785960807" anchor-label="gc16" id="2125951587%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc16.html"><span><span>gc16</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2125951587%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="2125951587%2FProperties%2F-1785960807" anchor-label="gc16" id="2125951587%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc16.html">gc16</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2137995902%2FProperties%2F-1785960807" anchor-label="gc17" id="-2137995902%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc17.html"><span><span>gc17</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2137995902%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-2137995902%2FProperties%2F-1785960807" anchor-label="gc17" id="-2137995902%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc17.html">gc17</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2106976095%2FProperties%2F-1785960807" anchor-label="gc18" id="-2106976095%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc18.html"><span><span>gc18</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2106976095%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-2106976095%2FProperties%2F-1785960807" anchor-label="gc18" id="-2106976095%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc18.html">gc18</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2075956288%2FProperties%2F-1785960807" anchor-label="gc19" id="-2075956288%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc19.html"><span><span>gc19</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2075956288%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-2075956288%2FProperties%2F-1785960807" anchor-label="gc19" id="-2075956288%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc19.html">gc19</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1413907136%2FProperties%2F-1785960807" anchor-label="gc2" id="-1413907136%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc2.html"><span><span>gc2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1413907136%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1413907136%2FProperties%2F-1785960807" anchor-label="gc2" id="-1413907136%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc2.html">gc2</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1393520534%2FProperties%2F-1785960807" anchor-label="gc20" id="-1393520534%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc20.html"><span><span>gc20</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1393520534%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1393520534%2FProperties%2F-1785960807" anchor-label="gc20" id="-1393520534%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc20.html">gc20</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1362500727%2FProperties%2F-1785960807" anchor-label="gc21" id="-1362500727%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc21.html"><span><span>gc21</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1362500727%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1362500727%2FProperties%2F-1785960807" anchor-label="gc21" id="-1362500727%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc21.html">gc21</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1331480920%2FProperties%2F-1785960807" anchor-label="gc22" id="-1331480920%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc22.html"><span><span>gc22</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1331480920%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1331480920%2FProperties%2F-1785960807" anchor-label="gc22" id="-1331480920%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc22.html">gc22</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1300461113%2FProperties%2F-1785960807" anchor-label="gc23" id="-1300461113%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc23.html"><span><span>gc23</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1300461113%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1300461113%2FProperties%2F-1785960807" anchor-label="gc23" id="-1300461113%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc23.html">gc23</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1269441306%2FProperties%2F-1785960807" anchor-label="gc24" id="-1269441306%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc24.html"><span><span>gc24</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1269441306%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1269441306%2FProperties%2F-1785960807" anchor-label="gc24" id="-1269441306%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc24.html">gc24</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1238421499%2FProperties%2F-1785960807" anchor-label="gc25" id="-1238421499%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc25.html"><span><span>gc25</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1238421499%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1238421499%2FProperties%2F-1785960807" anchor-label="gc25" id="-1238421499%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc25.html">gc25</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1207401692%2FProperties%2F-1785960807" anchor-label="gc26" id="-1207401692%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc26.html"><span><span>gc26</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1207401692%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1207401692%2FProperties%2F-1785960807" anchor-label="gc26" id="-1207401692%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc26.html">gc26</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1176381885%2FProperties%2F-1785960807" anchor-label="gc27" id="-1176381885%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc27.html"><span><span>gc27</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1176381885%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1176381885%2FProperties%2F-1785960807" anchor-label="gc27" id="-1176381885%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc27.html">gc27</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1145362078%2FProperties%2F-1785960807" anchor-label="gc28" id="-1145362078%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc28.html"><span><span>gc28</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1145362078%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1145362078%2FProperties%2F-1785960807" anchor-label="gc28" id="-1145362078%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc28.html">gc28</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1114342271%2FProperties%2F-1785960807" anchor-label="gc29" id="-1114342271%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc29.html"><span><span>gc29</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1114342271%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1114342271%2FProperties%2F-1785960807" anchor-label="gc29" id="-1114342271%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc29.html">gc29</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1382887329%2FProperties%2F-1785960807" anchor-label="gc3" id="-1382887329%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc3.html"><span><span>gc3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1382887329%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1382887329%2FProperties%2F-1785960807" anchor-label="gc3" id="-1382887329%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc3.html">gc3</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-431906517%2FProperties%2F-1785960807" anchor-label="gc30" id="-431906517%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc30.html"><span><span>gc30</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-431906517%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-431906517%2FProperties%2F-1785960807" anchor-label="gc30" id="-431906517%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc30.html">gc30</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-400886710%2FProperties%2F-1785960807" anchor-label="gc31" id="-400886710%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc31.html"><span><span>gc31</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-400886710%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-400886710%2FProperties%2F-1785960807" anchor-label="gc31" id="-400886710%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc31.html">gc31</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-369866903%2FProperties%2F-1785960807" anchor-label="gc32" id="-369866903%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc32.html"><span><span>gc32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-369866903%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-369866903%2FProperties%2F-1785960807" anchor-label="gc32" id="-369866903%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc32.html">gc32</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-338847096%2FProperties%2F-1785960807" anchor-label="gc33" id="-338847096%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc33.html"><span><span>gc33</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-338847096%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-338847096%2FProperties%2F-1785960807" anchor-label="gc33" id="-338847096%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc33.html">gc33</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-307827289%2FProperties%2F-1785960807" anchor-label="gc34" id="-307827289%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc34.html"><span><span>gc34</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-307827289%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-307827289%2FProperties%2F-1785960807" anchor-label="gc34" id="-307827289%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc34.html">gc34</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-276807482%2FProperties%2F-1785960807" anchor-label="gc35" id="-276807482%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc35.html"><span><span>gc35</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-276807482%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-276807482%2FProperties%2F-1785960807" anchor-label="gc35" id="-276807482%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc35.html">gc35</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-245787675%2FProperties%2F-1785960807" anchor-label="gc36" id="-245787675%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc36.html"><span><span>gc36</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-245787675%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-245787675%2FProperties%2F-1785960807" anchor-label="gc36" id="-245787675%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc36.html">gc36</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-214767868%2FProperties%2F-1785960807" anchor-label="gc37" id="-214767868%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc37.html"><span><span>gc37</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-214767868%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-214767868%2FProperties%2F-1785960807" anchor-label="gc37" id="-214767868%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc37.html">gc37</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-183748061%2FProperties%2F-1785960807" anchor-label="gc38" id="-183748061%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc38.html"><span><span>gc38</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-183748061%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-183748061%2FProperties%2F-1785960807" anchor-label="gc38" id="-183748061%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc38.html">gc38</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-152728254%2FProperties%2F-1785960807" anchor-label="gc39" id="-152728254%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc39.html"><span><span>gc39</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-152728254%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-152728254%2FProperties%2F-1785960807" anchor-label="gc39" id="-152728254%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc39.html">gc39</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1351867522%2FProperties%2F-1785960807" anchor-label="gc4" id="-1351867522%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc4.html"><span><span>gc4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1351867522%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1351867522%2FProperties%2F-1785960807" anchor-label="gc4" id="-1351867522%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc4.html">gc4</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="529707500%2FProperties%2F-1785960807" anchor-label="gc40" id="529707500%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc40.html"><span><span>gc40</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="529707500%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="529707500%2FProperties%2F-1785960807" anchor-label="gc40" id="529707500%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc40.html">gc40</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="560727307%2FProperties%2F-1785960807" anchor-label="gc41" id="560727307%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc41.html"><span><span>gc41</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="560727307%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="560727307%2FProperties%2F-1785960807" anchor-label="gc41" id="560727307%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc41.html">gc41</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="591747114%2FProperties%2F-1785960807" anchor-label="gc42" id="591747114%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc42.html"><span><span>gc42</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="591747114%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="591747114%2FProperties%2F-1785960807" anchor-label="gc42" id="591747114%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc42.html">gc42</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="622766921%2FProperties%2F-1785960807" anchor-label="gc43" id="622766921%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc43.html"><span><span>gc43</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="622766921%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="622766921%2FProperties%2F-1785960807" anchor-label="gc43" id="622766921%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc43.html">gc43</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="653786728%2FProperties%2F-1785960807" anchor-label="gc44" id="653786728%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc44.html"><span><span>gc44</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="653786728%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="653786728%2FProperties%2F-1785960807" anchor-label="gc44" id="653786728%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc44.html">gc44</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="684806535%2FProperties%2F-1785960807" anchor-label="gc45" id="684806535%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc45.html"><span><span>gc45</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="684806535%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="684806535%2FProperties%2F-1785960807" anchor-label="gc45" id="684806535%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc45.html">gc45</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="715826342%2FProperties%2F-1785960807" anchor-label="gc46" id="715826342%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc46.html"><span><span>gc46</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="715826342%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="715826342%2FProperties%2F-1785960807" anchor-label="gc46" id="715826342%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc46.html">gc46</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="746846149%2FProperties%2F-1785960807" anchor-label="gc47" id="746846149%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc47.html"><span><span>gc47</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="746846149%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="746846149%2FProperties%2F-1785960807" anchor-label="gc47" id="746846149%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc47.html">gc47</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="777865956%2FProperties%2F-1785960807" anchor-label="gc48" id="777865956%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc48.html"><span><span>gc48</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="777865956%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="777865956%2FProperties%2F-1785960807" anchor-label="gc48" id="777865956%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc48.html">gc48</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="808885763%2FProperties%2F-1785960807" anchor-label="gc49" id="808885763%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc49.html"><span><span>gc49</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="808885763%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="808885763%2FProperties%2F-1785960807" anchor-label="gc49" id="808885763%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc49.html">gc49</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1320847715%2FProperties%2F-1785960807" anchor-label="gc5" id="-1320847715%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc5.html"><span><span>gc5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1320847715%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1320847715%2FProperties%2F-1785960807" anchor-label="gc5" id="-1320847715%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc5.html">gc5</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1491321517%2FProperties%2F-1785960807" anchor-label="gc50" id="1491321517%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc50.html"><span><span>gc50</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1491321517%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1491321517%2FProperties%2F-1785960807" anchor-label="gc50" id="1491321517%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc50.html">gc50</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1522341324%2FProperties%2F-1785960807" anchor-label="gc51" id="1522341324%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc51.html"><span><span>gc51</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1522341324%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1522341324%2FProperties%2F-1785960807" anchor-label="gc51" id="1522341324%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc51.html">gc51</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1553361131%2FProperties%2F-1785960807" anchor-label="gc52" id="1553361131%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc52.html"><span><span>gc52</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1553361131%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1553361131%2FProperties%2F-1785960807" anchor-label="gc52" id="1553361131%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc52.html">gc52</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1584380938%2FProperties%2F-1785960807" anchor-label="gc53" id="1584380938%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc53.html"><span><span>gc53</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1584380938%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1584380938%2FProperties%2F-1785960807" anchor-label="gc53" id="1584380938%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc53.html">gc53</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1615400745%2FProperties%2F-1785960807" anchor-label="gc54" id="1615400745%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc54.html"><span><span>gc54</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1615400745%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1615400745%2FProperties%2F-1785960807" anchor-label="gc54" id="1615400745%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc54.html">gc54</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1646420552%2FProperties%2F-1785960807" anchor-label="gc55" id="1646420552%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc55.html"><span><span>gc55</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1646420552%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1646420552%2FProperties%2F-1785960807" anchor-label="gc55" id="1646420552%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc55.html">gc55</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1677440359%2FProperties%2F-1785960807" anchor-label="gc56" id="1677440359%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc56.html"><span><span>gc56</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1677440359%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1677440359%2FProperties%2F-1785960807" anchor-label="gc56" id="1677440359%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc56.html">gc56</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1708460166%2FProperties%2F-1785960807" anchor-label="gc57" id="1708460166%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc57.html"><span><span>gc57</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1708460166%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1708460166%2FProperties%2F-1785960807" anchor-label="gc57" id="1708460166%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc57.html">gc57</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1739479973%2FProperties%2F-1785960807" anchor-label="gc58" id="1739479973%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc58.html"><span><span>gc58</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1739479973%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="1739479973%2FProperties%2F-1785960807" anchor-label="gc58" id="1739479973%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc58.html">gc58</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1289827908%2FProperties%2F-1785960807" anchor-label="gc6" id="-1289827908%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc6.html"><span><span>gc6</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1289827908%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1289827908%2FProperties%2F-1785960807" anchor-label="gc6" id="-1289827908%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc6.html">gc6</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1779992148%2FProperties%2F-1785960807" anchor-label="gc62" id="-1779992148%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc62.html"><span><span>gc62</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1779992148%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1779992148%2FProperties%2F-1785960807" anchor-label="gc62" id="-1779992148%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc62.html">gc62</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1748972341%2FProperties%2F-1785960807" anchor-label="gc63" id="-1748972341%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc63.html"><span><span>gc63</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1748972341%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1748972341%2FProperties%2F-1785960807" anchor-label="gc63" id="-1748972341%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc63.html">gc63</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1717952534%2FProperties%2F-1785960807" anchor-label="gc64" id="-1717952534%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc64.html"><span><span>gc64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1717952534%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1717952534%2FProperties%2F-1785960807" anchor-label="gc64" id="-1717952534%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc64.html">gc64</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1686932727%2FProperties%2F-1785960807" anchor-label="gc65" id="-1686932727%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc65.html"><span><span>gc65</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1686932727%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1686932727%2FProperties%2F-1785960807" anchor-label="gc65" id="-1686932727%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc65.html">gc65</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1655912920%2FProperties%2F-1785960807" anchor-label="gc66" id="-1655912920%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc66.html"><span><span>gc66</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1655912920%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1655912920%2FProperties%2F-1785960807" anchor-label="gc66" id="-1655912920%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc66.html">gc66</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1624893113%2FProperties%2F-1785960807" anchor-label="gc67" id="-1624893113%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc67.html"><span><span>gc67</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1624893113%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1624893113%2FProperties%2F-1785960807" anchor-label="gc67" id="-1624893113%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc67.html">gc67</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1593873306%2FProperties%2F-1785960807" anchor-label="gc68" id="-1593873306%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc68.html"><span><span>gc68</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1593873306%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1593873306%2FProperties%2F-1785960807" anchor-label="gc68" id="-1593873306%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc68.html">gc68</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1562853499%2FProperties%2F-1785960807" anchor-label="gc69" id="-1562853499%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc69.html"><span><span>gc69</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1562853499%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1562853499%2FProperties%2F-1785960807" anchor-label="gc69" id="-1562853499%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc69.html">gc69</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1258808101%2FProperties%2F-1785960807" anchor-label="gc7" id="-1258808101%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc7.html"><span><span>gc7</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1258808101%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1258808101%2FProperties%2F-1785960807" anchor-label="gc7" id="-1258808101%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc7.html">gc7</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-880417745%2FProperties%2F-1785960807" anchor-label="gc70" id="-880417745%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc70.html"><span><span>gc70</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-880417745%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-880417745%2FProperties%2F-1785960807" anchor-label="gc70" id="-880417745%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc70.html">gc70</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-849397938%2FProperties%2F-1785960807" anchor-label="gc71" id="-849397938%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc71.html"><span><span>gc71</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-849397938%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-849397938%2FProperties%2F-1785960807" anchor-label="gc71" id="-849397938%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc71.html">gc71</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-818378131%2FProperties%2F-1785960807" anchor-label="gc72" id="-818378131%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc72.html"><span><span>gc72</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818378131%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-818378131%2FProperties%2F-1785960807" anchor-label="gc72" id="-818378131%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc72.html">gc72</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1227788294%2FProperties%2F-1785960807" anchor-label="gc8" id="-1227788294%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc8.html"><span><span>gc8</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1227788294%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1227788294%2FProperties%2F-1785960807" anchor-label="gc8" id="-1227788294%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc8.html">gc8</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1196768487%2FProperties%2F-1785960807" anchor-label="gc9" id="-1196768487%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="gc9.html"><span><span>gc9</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1196768487%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-1196768487%2FProperties%2F-1785960807" anchor-label="gc9" id="-1196768487%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gc9.html">gc9</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-896265788%2FProperties%2F-1785960807" anchor-label="isDark" id="-896265788%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":lib-compose-widget:dokkaHtml/release" data-filterable-set=":lib-compose-widget:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is-dark.html"><span>is</span><wbr></wbr><span><span>Dark</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-896265788%2FProperties%2F-1785960807"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-compose-widget:dokkaHtml/release"><a data-name="-896265788%2FProperties%2F-1785960807" anchor-label="isDark" id="-896265788%2FProperties%2F-1785960807" data-filterable-set=":lib-compose-widget:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-dark.html">isDark</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

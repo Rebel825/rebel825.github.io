@@ -1,0 +1,1 @@
+sourceset_dependencies='{":lib-compose-widget:dokkaHtml/androidTestRelease":[],":lib-compose-widget:dokkaHtml/debug":[],":lib-compose-widget:dokkaHtml/main":[],":lib-compose-widget:dokkaHtml/release":[]}'
